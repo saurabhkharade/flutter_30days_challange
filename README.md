@@ -49,7 +49,7 @@ Feel free to create a pull request or open an issue.
 If you want help or collaboration, connect with me:
 
 * **GitHub:** https://github.com/saurabhkharade
-* **LinkedIn:** your_profile
+* **LinkedIn:** [your_profile](https://www.linkedin.com/in/saurabh-kharade-244500165/)
 * **Instagram:** https://www.instagram.com/programmingkeeda/
 ---
 
