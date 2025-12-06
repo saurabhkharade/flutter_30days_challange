@@ -28,13 +28,8 @@ Perfect for beginners and Android developers transitioning to Flutter.
 
 During the challenge, you will create:
 
-* ✔️ Counter App
-* ✔️ Todo App
-* ✔️ Notes App (Local DB)
-* ✔️ Weather App (API)
-* ✔️ Login App (Firebase)
-* ✔️ Final Full App Project
-
+* ✔️ E-Commerce App
+* ✔️ Doctor booking App
 ---
 
 ## 🤝 Contributing
