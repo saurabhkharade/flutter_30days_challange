@@ -13,7 +13,7 @@ class DayTwoScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(50),
+          margin: EdgeInsets.all(30),
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: Colors.white,
@@ -41,7 +41,7 @@ class DayTwoScreen extends StatelessWidget {
               const SizedBox(height: 10),
               const Text(
                 "Today I learned basic UI structure, widgets, "
-                    "Container, Text, Button, Icon & simple styling.",
+                    "Container, Text, Button, Icon & simple styling.\n\n@programmingkeeda",
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
               ),

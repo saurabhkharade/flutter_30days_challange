@@ -1,25 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_30days_challange/day_two.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:provider/provider.dart';
 
-import 'day_one.dart';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
-  runApp(const MyApp());
+  await Hive.initFlutter();
+  Hive.registerAdapter(UserModelAdapter()); // ✅ Hive Adapter Register
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserModel()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      title: 'User Registration',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: DayTwoScreen(),
+
+      // ✅ Counter App काढून User Form Screen दिली
+      home: const UserFormScreen(),
     );
   }
 }
