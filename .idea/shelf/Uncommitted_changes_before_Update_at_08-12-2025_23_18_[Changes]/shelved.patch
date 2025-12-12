@@ -1,0 +1,101 @@
+Index: lib/main.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import 'package:flutter/material.dart';\r\n\r\nimport 'homepage.dart';\r\n\r\nvoid main() {\r\n  runApp(const MyApp());\r\n}\r\n\r\nclass MyApp extends StatelessWidget {\r\n  const MyApp({super.key});\r\n\r\n  // This widget is the root of your application.\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return MaterialApp(\r\n      title: 'Flutter Demo',\r\n      debugShowCheckedModeBanner: false,\r\n      theme: ThemeData(\r\n        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),\r\n      ),\r\n      home: HomeScreen(),\r\n    );\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/main.dart b/lib/main.dart
+--- a/lib/main.dart	(revision eeadd5f3de8f1aaa39e3901b3a9b8b706be2e2ee)
++++ b/lib/main.dart	(date 1765215898688)
+@@ -1,6 +1,7 @@
+ import 'package:flutter/material.dart';
++import 'package:flutter_30days_challange/day_two.dart';
+ 
+-import 'homepage.dart';
++import 'day_one.dart';
+ 
+ void main() {
+   runApp(const MyApp());
+@@ -18,7 +19,7 @@
+       theme: ThemeData(
+         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+       ),
+-      home: HomeScreen(),
++      home: DayTwoScreen(),
+     );
+   }
+ }
+Index: lib/day_two.dart
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/day_two.dart b/lib/day_two.dart
+new file mode 100644
+--- /dev/null	(date 1765216089621)
++++ b/lib/day_two.dart	(date 1765216089621)
+@@ -0,0 +1,59 @@
++import 'package:flutter/material.dart';
++
++class DayTwoScreen extends StatelessWidget {
++  const DayTwoScreen({super.key});
++
++  @override
++  Widget build(BuildContext context) {
++    return Scaffold(
++      backgroundColor: Colors.grey[100],
++      appBar: AppBar(
++        title: const Text("Day 2 - Flutter Study"),
++        centerTitle: true,
++      ),
++      body: Center(
++        child: Container(
++          margin: EdgeInsets.all(50),
++          padding: const EdgeInsets.all(20),
++          decoration: BoxDecoration(
++            color: Colors.white,
++            borderRadius: BorderRadius.circular(20),
++            boxShadow: [
++              BoxShadow(
++                blurRadius: 12,
++                color: Colors.black.withOpacity(0.1),
++                offset: const Offset(0, 6),
++              )
++            ],
++          ),
++          child: Column(
++            mainAxisSize: MainAxisSize.min,
++            children: [
++              const Icon(Icons.flutter_dash, size: 80),
++              const SizedBox(height: 20),
++              const Text(
++                "Flutter Day 2",
++                style: TextStyle(
++                  fontSize: 26,
++                  fontWeight: FontWeight.bold,
++                ),
++              ),
++              const SizedBox(height: 10),
++              const Text(
++                "Today I learned basic UI structure, widgets, "
++                    "Container, Text, Button, Icon & simple styling.",
++                textAlign: TextAlign.center,
++                style: TextStyle(fontSize: 16),
++              ),
++              const SizedBox(height: 20),
++              ElevatedButton(
++                onPressed: () {},
++                child: const Text("Continue Learning"),
++              ),
++            ],
++          ),
++        ),
++      ),
++    );
++  }
++}
+\ No newline at end of file
+diff --git a/lib/homepage.dart b/lib/day_one.dart
+rename from lib/homepage.dart
+rename to lib/day_one.dart
