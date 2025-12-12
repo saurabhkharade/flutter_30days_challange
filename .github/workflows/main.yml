@@ -1,19 +1,13 @@
 on:
   pull_request:
-    branches:
-      - main
-      - master
+    branches: [main]
   push:
-    branches:
-      - main
-      - master
-      - develop
+    branches: [main]
 
-name: "Windows Build - APK & AAB"
+name: Windows Build - APK & AAB
 
 jobs:
   build:
-    name: Build Android APK & AAB on Windows
     runs-on: windows-latest
 
     steps:
@@ -29,20 +23,25 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
-          architecture: x64
+
+      - name: Set JAVA_HOME for Gradle
+        run: echo "JAVA_HOME=$env:JAVA_HOME_17_X64" >> $env:GITHUB_ENV
+
+      - name: Flutter Clean
+        run: flutter clean
 
       - name: Flutter Pub Get
         run: flutter pub get
 
-      # ----------- Build APK (No Split) -----------
-      - name: Build Release APK
+      - name: Accept Android Licenses
+        run: flutter doctor --android-licenses
+
+      - name: Build APK
         run: flutter build apk --release
 
-      # ----------- Build AAB -----------
-      - name: Build Release AAB
+      - name: Build AAB
         run: flutter build appbundle --release
 
-      # ----------- Upload to GitHub Release -----------
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
