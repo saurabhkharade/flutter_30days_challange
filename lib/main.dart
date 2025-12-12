@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
+import 'day3/Model/UserModel.dart';
+import 'day3/ViewModel/UserViewModel.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -11,7 +14,7 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => UserModel()),
+        ChangeNotifierProvider(create: (_) => UserViewModel()),
       ],
       child: const MyApp(),
     ),
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // ✅ Counter App काढून User Form Screen दिली
-      home: const UserFormScreen(),
+
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:hive/hive.dart';
-part 'user_model.g.dart';
+part 'UserModel.g.dart';
 
 @HiveType(typeId: 1)
 class UserModel {
@@ -7,7 +7,6 @@ class UserModel {
   String name;
 
   @HiveField(1)
-
   String email;
 
   @HiveField(2)
