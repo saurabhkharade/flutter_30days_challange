@@ -9,6 +9,7 @@
       "dependencies": [
         "cupertino_icons",
         "flutter",
+        "flutter_drawing_board",
         "hive",
         "hive_flutter",
         "path_provider",
@@ -107,6 +108,13 @@
         "test_api",
         "vector_math",
         "vm_service"
+      ]
+    },
+    {
+      "name": "flutter_drawing_board",
+      "version": "0.9.8",
+      "dependencies": [
+        "flutter"
       ]
     },
     {

@@ -170,6 +170,12 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "flutter_drawing_board",
+      "rootUri": "file:///C:/Users/saura/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_drawing_board-0.9.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///C:/Users/saura/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-5.0.0",
       "packageUri": "lib/",
