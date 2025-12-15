@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../day4/painterexample.dart';
 
 class DayListScreen extends StatelessWidget {
-  final List<String> days = ["Day 1", "Day 2", "Day 3", ];
+  final List<String> days = ["Day 1", "Day 2", "Day 3","Day4","Day 5", "Day 6" ];
 
   @override
   Widget build(BuildContext context) {
